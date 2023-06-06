@@ -3,6 +3,9 @@ const lastName = document.getElementById("lastName");
 const age = document.getElementById("age");
 const submit = document.getElementById("submit");
 const list = document.getElementById("list");
+const radioIT = document.getElementById("it");
+const radioHospitality = document.getElementById("hospitality");
+const changeDiv = document.getElementById("changeDiv");
 
 submit.addEventListener("click", function(e){
     e.preventDefault(); /* this prevents the default settings of the input type submit. it wants to go somewhere so it always refreshed for me */
@@ -16,4 +19,12 @@ if(firstVal.length > 5){
 }
 list.innerHTML += `<li>${lastVal}</li>`;
 list.innerHTML += `<li>${ageVal}</li>`;
+})
+
+radioIT.addEventListener("click", function(){
+    changeDiv.className = "background-purple";
+})
+
+radioHospitality.addEventListener("click", function(){
+    changeDiv.className = "background-yellow";
 })
